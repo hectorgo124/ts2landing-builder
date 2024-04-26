@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ts2landing-demo:build:production"
+              "buildTarget": "ts2landing-demo:build:production"
             },
             "development": {
-              "browserTarget": "ts2landing-demo:build:development"
+              "buildTarget": "ts2landing-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ts2landing-demo:build"
+            "buildTarget": "ts2landing-demo:build"
           }
         },
         "test": {
