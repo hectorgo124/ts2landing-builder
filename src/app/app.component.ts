@@ -49,33 +49,33 @@ export class AppComponent {
           logoUrl: 'https://avatars.githubusercontent.com/u/100232264?v=4',
         },
         content: [
-          {
-            direction: 'column',
-            gap: '15px',
-            id: 'col1',
-            title: {
-              align: 'center',
-              text: 'COL1',
-            },
-          },
-          {
-            direction: 'column',
-            gap: '15px',
-            id: 'col2',
-            title: {
-              align: 'center',
-              text: 'COL2',
-            },
-          },
-          {
-            direction: 'column',
-            gap: '15px',
-            id: 'col3',
-            title: {
-              align: 'center',
-              text: 'COL3',
-            },
-          },
+          // {
+          //   direction: 'column',
+          //   gap: '15px',
+          //   id: 'col1',
+          //   title: {
+          //     align: 'center',
+          //     text: 'COL1',
+          //   },
+          // },
+          // {
+          //   direction: 'column',
+          //   gap: '15px',
+          //   id: 'col2',
+          //   title: {
+          //     align: 'center',
+          //     text: 'COL2',
+          //   },
+          // },
+          // {
+          //   direction: 'column',
+          //   gap: '15px',
+          //   id: 'col3',
+          //   title: {
+          //     align: 'center',
+          //     text: 'COL3',
+          //   },
+          // },
         ],
       })
     );
