@@ -1,0 +1,95 @@
+.open-menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  height: 36px;
+  width: 120px;
+  border: none;
+  background: #000000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.fixed {
+  position: fixed;
+}
+.btn-label {
+  line-height: 20px;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.open-menu-btn:hover {
+  background: rgba(22, 22, 22, 0.636);
+}
+
+.open-menu-btn:hover .svg-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -320px; /* Esto hace que el menú esté fuera de la pantalla */
+  width: 300px; /* Ancho del menú */
+  height: 100%;
+  backdrop-filter: blur(16px);
+  transition: left 0.3s ease; /* Transición suave para animar el despliegue */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  z-index: 10;
+  button {
+    width: fit-content;
+  }
+}
+
+.side-menu.active {
+  left: 0; /* Muestra el menú cuando está activo */
+}
+
+.controls-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  select {
+    padding: 4px;
+    border-radius: 4px;
+  }
+}
+
+.btns-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-controls {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.control-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.spacer {
+    border: 1px solid gray;
+}

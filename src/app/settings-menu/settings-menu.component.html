@@ -1,0 +1,110 @@
+<!-- CONTENEDOR PARA CONTROLES -->
+<button class="open-menu-btn fixed" (click)="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20" fill="none" class="svg-icon">
+        <g stroke-width="1.5" stroke-linecap="round" stroke="#ffffff">
+            <circle r="2.5" cy="10" cx="10"></circle>
+            <path fill-rule="evenodd"
+                d="m8.39079 2.80235c.53842-1.51424 2.67991-1.51424 3.21831-.00001.3392.95358 1.4284 1.40477 2.3425.97027 1.4514-.68995 2.9657.82427 2.2758 2.27575-.4345.91407.0166 2.00334.9702 2.34248 1.5143.53842 1.5143 2.67996 0 3.21836-.9536.3391-1.4047 1.4284-.9702 2.3425.6899 1.4514-.8244 2.9656-2.2758 2.2757-.9141-.4345-2.0033.0167-2.3425.9703-.5384 1.5142-2.67989 1.5142-3.21831 0-.33914-.9536-1.4284-1.4048-2.34247-.9703-1.45148.6899-2.96571-.8243-2.27575-2.2757.43449-.9141-.01669-2.0034-.97028-2.3425-1.51422-.5384-1.51422-2.67994.00001-3.21836.95358-.33914 1.40476-1.42841.97027-2.34248-.68996-1.45148.82427-2.9657 2.27575-2.27575.91407.4345 2.00333-.01669 2.34247-.97026z"
+                clip-rule="evenodd"></path>
+        </g>
+    </svg>
+    <span class="btn-label">Settings</span>
+</button>
+
+<div class="side-menu" [class.active]="isOpen">
+    <div class="btns-cont">
+        <button (click)="toggleMenu()" class="open-menu-btn">
+            <span class="btn-label">
+                Close
+            </span>
+        </button>
+        <button (click)="modal.openModal()" class="open-menu-btn">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M17 7.82959L18.6965 9.35641C20.239 10.7447 21.0103 11.4389 21.0103 12.3296C21.0103 13.2203 20.239 13.9145 18.6965 15.3028L17 16.8296"
+                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M13.9868 5L12.9934 8.70743M11.8432 13L10.0132 19.8297" stroke="#ffffff" stroke-width="1.5"
+                        stroke-linecap="round"></path>
+                    <path
+                        d="M7.00005 7.82959L5.30358 9.35641C3.76102 10.7447 2.98975 11.4389 2.98975 12.3296C2.98975 13.2203 3.76102 13.9145 5.30358 15.3028L7.00005 16.8296"
+                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                </g>
+            </svg>
+        </button>
+        <button (click)="resetLanding()" class="open-menu-btn">
+            <svg fill="#ffffff" width="24px" height="24px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M960 0v213.333c411.627 0 746.667 334.934 746.667 746.667S1371.627 1706.667 960 1706.667 213.333 1371.733 213.333 960c0-197.013 78.4-382.507 213.334-520.747v254.08H640V106.667H53.333V320h191.04C88.64 494.08 0 720.96 0 960c0 529.28 430.613 960 960 960s960-430.72 960-960S1489.387 0 960 0"
+                        fill-rule="evenodd"></path>
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <form [formGroup]="landingForm" class="controls-cont">
+        <div class="intro-controls">
+            <h3>Intro:</h3>
+            <div class="control-cont">
+                <label for="introDisplay">Display</label>
+                <select name="introDisplay" id="introDisplay" formControlName="introDisplay">
+                    <option value="basic-left">Basic Left</option>
+                    <option value="basic">Basic</option>
+                    <option value="basic-right">Basic Right</option>
+                </select>
+            </div>
+            <div class="spacer"></div>
+            <div class="control-cont">
+                <label for="title-text">Title text:</label>
+                <input id="title-text" type="text" formControlName="titleText">
+            </div>
+            <div class="control-cont">
+                <label for="title-align">Title align:</label>
+                <select name="title-align" id="align" formControlName="titleAlign">
+                    <option value="center">Center</option>
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                </select>
+            </div>
+            <div class="spacer"></div>
+            <div class="control-cont">
+                <label for="subtitle-text">Subtitle text:</label>
+                <input id="subtitle-text" type="text" formControlName="subtitleText">
+            </div>
+            <div class="control-cont">
+                <label for="subtitle-align">Subtitle align:</label>
+                <select name="subtitle-align" id="align" formControlName="subtitleAlign">
+                    <option value="center">Center</option>
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                </select>
+            </div>
+            <div class="spacer"></div>
+
+            <div class="control-cont">
+                <!-- logoSize?: 'sm' | 'md' | 'lg' | 'xl'; -->
+                <label for="logoSize">Logo Size</label>
+                <select name="logoSize" id="logoSize" formControlName="logoSize">
+                    <option value="sm">Small</option>
+                    <option value="md">Medium</option>
+                    <option value="lg">Large</option>
+                    <option value="xl">Extra Large</option>
+                </select>
+            </div>
+            <div class="control-cont">
+                <label for="logo-url">Logo URL:</label>
+                <input id="logo-url" type="text" formControlName="logoUrl">
+            </div>
+            <div class="spacer"></div>
+
+        </div>
+    </form>
+
+
+</div>
+<app-code-modal #modal></app-code-modal>
