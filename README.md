@@ -1,27 +1,10 @@
 # Ts2landingDemo
+## TODO:
+- Implementar NGXS para gestión de estados (Landing State)
+- Uso del estado para toda la aplicación, así sincronizar valores en todos los componentes. Ahora mismo hay un fallo en code-modal.component que no actualiza el valor de el componente padre (settings-menu.component).
+- Continuar añadiendo campos al settings-menu.component para poder configurar la Landing.
+- Posibilidad de separar el settings-menu en varios componentes como por ejemplo:
+    - Intro settings
+    - Content settings
+    Estaría bien porque así podriamos configurar el contenido más facilmente, ya que se va a poder crear y modificar dinámicamente, es decir, se va poder desde configuración añadir mas contenido y poder eliminarlo, y por tanto, por cada contenido aparecerá un formulario de configuración de este contenido, que a la vez podrá configurar subcontenido.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

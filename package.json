@@ -18,8 +18,10 @@
     "@angular/platform-browser": "^17.3.6",
     "@angular/platform-browser-dynamic": "^17.3.6",
     "@angular/router": "^17.3.6",
+    "@ngxs/storage-plugin": "^18.0.0",
+    "@ngxs/store": "^18.0.0",
     "rxjs": "~7.8.0",
-    "ts2landing": "^0.0.8",
+    "ts2landing": "^0.0.13",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.4"
   },
