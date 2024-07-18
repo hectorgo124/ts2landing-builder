@@ -16,7 +16,7 @@ import { RemoveLanding, SaveLanding } from './landing.actions';
           text: 'PRUEBA',
         },
         display: 'basic-left',
-        animation: 'TitleZoom',
+        animation: 'TitleReveal',
         linkButton: {
           link: 'https://google.com',
           text: {
@@ -67,7 +67,7 @@ export class LandingState {
    */
   @Selector()
   static getLanding(state: LandingStateModel) {
-    return state.user;
+    return state.landing;
   }
 
   // /**
@@ -91,7 +91,7 @@ export class LandingState {
     { payload }: SaveLanding
   ) {
     patchState({
-      user: payload, // Actualiza el estado con el nuevo Landing
+      landing: payload, // Actualiza el estado con el nuevo Landing
     });
   }
 
@@ -105,7 +105,7 @@ export class LandingState {
     {}: RemoveLanding
   ) {
     patchState({
-      user: undefined, // Elimina el Landing del estado
+      landing: undefined, // Elimina el Landing del estado
     });
   }
 }

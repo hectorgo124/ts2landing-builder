@@ -32,6 +32,7 @@ export class SettingsMenuComponent {
       introDisplay: [this.landing().intro.display],
       logoSize: [this.landing().intro.logoSize],
       logoUrl: [this.landing().intro.logoUrl],
+      animation: [this.landing().intro.animation]
     });
 
     // Suscribirse a los cambios en el formulario
@@ -48,6 +49,7 @@ export class SettingsMenuComponent {
       updatedLanding.intro.display = values.introDisplay;
       updatedLanding.intro.logoSize = values.logoSize;
       updatedLanding.intro.logoUrl = values.logoUrl;
+      updatedLanding.intro.animation = values.animation;
 
       this.store.dispatch(new SaveLanding(updatedLanding));
     });
