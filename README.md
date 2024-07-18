@@ -7,4 +7,5 @@
     - Intro settings
     - Content settings
     Estaría bien porque así podriamos configurar el contenido más facilmente, ya que se va a poder crear y modificar dinámicamente, es decir, se va poder desde configuración añadir mas contenido y poder eliminarlo, y por tanto, por cada contenido aparecerá un formulario de configuración de este contenido, que a la vez podrá configurar subcontenido.
-
+- State para saber si el settings-menu estaba abierto al recargar la página.
+- Bloquear scroll del contenido principal cuando este abierto el modal.
