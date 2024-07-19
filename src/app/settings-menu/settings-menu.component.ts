@@ -32,7 +32,8 @@ export class SettingsMenuComponent {
       introDisplay: [this.landing().intro.display],
       logoSize: [this.landing().intro.logoSize],
       logoUrl: [this.landing().intro.logoUrl],
-      animation: [this.landing().intro.animation]
+      animation: [this.landing().intro.animation],
+      padding: [this.landing().intro.padding]
     });
 
     // Suscribirse a los cambios en el formulario
@@ -50,6 +51,7 @@ export class SettingsMenuComponent {
       updatedLanding.intro.logoSize = values.logoSize;
       updatedLanding.intro.logoUrl = values.logoUrl;
       updatedLanding.intro.animation = values.animation;
+      updatedLanding.intro.padding = values.padding;
 
       this.store.dispatch(new SaveLanding(updatedLanding));
     });

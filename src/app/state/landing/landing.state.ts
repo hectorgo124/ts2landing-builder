@@ -12,50 +12,27 @@ import { RemoveLanding, SaveLanding } from './landing.actions';
       id: 'landing',
       intro: {
         title: {
-          align: 'center',
-          text: 'PRUEBA',
+          align: 'start',
+          text: 'TS2LANDING. Transforming an object to a Landing Page',
+        },
+        subtitle: {
+          align: 'start',
+          text: 'Created by Hector Granell :)',
         },
         display: 'basic-left',
         animation: 'TitleReveal',
         linkButton: {
-          link: 'https://google.com',
+          link: 'https://www.npmjs.com/package/ts2landing',
           text: {
             align: 'center',
-            text: 'Google',
+            text: 'NPM',
           },
         },
-        logoSize: 'lg',
+        logoSize: 'xl',
         logoUrl: 'https://avatars.githubusercontent.com/u/100232264?v=4',
+        padding: 'md',
       },
-      content: [
-        {
-          direction: 'column',
-          gap: '15px',
-          id: 'col1',
-          title: {
-            align: 'center',
-            text: 'COL1',
-          },
-        },
-        {
-          direction: 'column',
-          gap: '15px',
-          id: 'col2',
-          title: {
-            align: 'center',
-            text: 'COL2',
-          },
-        },
-        {
-          direction: 'column',
-          gap: '15px',
-          id: 'col3',
-          title: {
-            align: 'center',
-            text: 'COL3',
-          },
-        },
-      ],
+      content: [],
     }, // Estado inicial del Landing
   },
 })
