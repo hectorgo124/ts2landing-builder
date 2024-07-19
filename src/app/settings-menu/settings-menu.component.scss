@@ -10,6 +10,7 @@
   background: #000000;
   border-radius: 20px;
   cursor: pointer;
+  margin: 8px;
 }
 .fixed {
   position: fixed;
@@ -52,7 +53,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-  z-index: 10;
+  z-index: 15;
   button {
     width: fit-content;
   }

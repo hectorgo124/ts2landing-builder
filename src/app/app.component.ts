@@ -29,15 +29,15 @@ export class AppComponent {
         id: 'landing',
         intro: {
           title: {
-            align: 'center',
-            text: 'TS2LANDING',
+            align: 'start',
+            text: 'TS2LANDING. Transforming an object to a Landing Page',
           },
           subtitle: {
-            align: 'center',
-            text: 'Created by Hector Granell :)'
+            align: 'start',
+            text: 'Created by Hector Granell :)',
           },
-          display: 'basic',
-          animation: 'TitleZoom',
+          display: 'basic-left',
+          animation: 'TitleReveal',
           linkButton: {
             link: 'https://www.npmjs.com/package/ts2landing',
             text: {
@@ -45,38 +45,11 @@ export class AppComponent {
               text: 'NPM',
             },
           },
-          logoSize: 'lg',
+          logoSize: 'xl',
           logoUrl: 'https://avatars.githubusercontent.com/u/100232264?v=4',
+          padding: 'md',
         },
-        content: [
-          // {
-          //   direction: 'column',
-          //   gap: '15px',
-          //   id: 'col1',
-          //   title: {
-          //     align: 'center',
-          //     text: 'COL1',
-          //   },
-          // },
-          // {
-          //   direction: 'column',
-          //   gap: '15px',
-          //   id: 'col2',
-          //   title: {
-          //     align: 'center',
-          //     text: 'COL2',
-          //   },
-          // },
-          // {
-          //   direction: 'column',
-          //   gap: '15px',
-          //   id: 'col3',
-          //   title: {
-          //     align: 'center',
-          //     text: 'COL3',
-          //   },
-          // },
-        ],
+        content: [],
       })
     );
   }
