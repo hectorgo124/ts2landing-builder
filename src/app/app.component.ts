@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { Landing } from 'ts2landing';
 import { LandingState } from './state/landing/landing.state';
 import { SaveLanding } from './state/landing/landing.actions';
 
