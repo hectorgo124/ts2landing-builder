@@ -1,0 +1,108 @@
+<form [formGroup]="introForm" class="controls-cont">
+    <div class="intro-controls">
+        <h3>Intro:</h3>
+        <div class="control-cont">
+            <label for="introDisplay">Display</label>
+            <select name="introDisplay" id="introDisplay" formControlName="introDisplay">
+                <option value="basic-left">Basic Left</option>
+                <option value="basic">Basic</option>
+                <option value="basic-right">Basic Right</option>
+            </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="control-cont">
+            <label for="title-text">Title text:</label>
+            <input id="title-text" type="text" formControlName="titleText">
+        </div>
+        <div class="control-cont">
+            <label for="title-align">Title align:</label>
+            <select name="title-align" id="align" formControlName="titleAlign">
+                <option value="center">Center</option>
+                <option value="start">Start</option>
+                <option value="end">End</option>
+            </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="control-cont">
+            <label for="subtitle-text">Subtitle text:</label>
+            <input id="subtitle-text" type="text" formControlName="subtitleText">
+        </div>
+        <div class="control-cont">
+            <label for="subtitle-align">Subtitle align:</label>
+            <select name="subtitle-align" id="align" formControlName="subtitleAlign">
+                <option value="center">Center</option>
+                <option value="start">Start</option>
+                <option value="end">End</option>
+            </select>
+        </div>
+        <div class="spacer"></div>
+
+        <div class="control-cont">
+            <!-- logoSize?: 'sm' | 'md' | 'lg' | 'xl'; -->
+            <label for="logoSize">Logo Size</label>
+            <select name="logoSize" id="logoSize" formControlName="logoSize">
+                <option value="sm">Small</option>
+                <option value="md">Medium</option>
+                <option value="lg">Large</option>
+                <option value="xl">Extra Large</option>
+            </select>
+        </div>
+        <div class="control-cont">
+            <label for="logo-url">Logo URL:</label>
+            <input id="logo-url" type="text" formControlName="logoUrl">
+        </div>
+        <div class="control-cont">
+            <label for="logo-id">Logo ID:</label>
+            <input id="logo-id" type="text" formControlName="logoId">
+        </div>
+        <div class="spacer"></div>
+
+        <div class="control-cont">
+            <!-- animation?: 'TitleZoom' | 'TitleReveal'; -->
+            <label for="animation">Animation</label>
+            <select name="animation" id="animation" formControlName="animation">
+                <option value="">None</option>
+                <option value="TitleZoom">Title Zoom</option>
+                <option value="TitleReveal">Title Reveal</option>
+            </select>
+        </div>
+
+        <div class="control-cont">
+            <!-- padding?: 'sm' | 'md' | 'lg'; -->
+            <label for="padding">Padding</label>
+            <select name="padding" id="padding" formControlName="padding">
+                <option value="sm">Small</option>
+                <option value="md">Medium</option>
+                <option value="lg">Large</option>
+            </select>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="control-cont">
+            <label for="button-align">Button align:</label>
+            <select name="button-align" id="button-align" formControlName="buttonAlign">
+                <option value="center">Center</option>
+                <option value="start">Start</option>
+                <option value="end">End</option>
+            </select>
+        </div>
+        <div class="control-cont">
+            <label for="button-text">Button text:</label>
+            <input id="button-text" type="text" formControlName="buttonText">
+        </div>
+        <div class="control-cont">
+            <label for="button-link">Button URL:</label>
+            <input id="button-link" type="text" formControlName="linkButton">
+        </div>
+        <div class="control-cont">
+            <label for="button-width">Button width:</label>
+            <input id="button-width" type="text" formControlName="buttonWidth">
+        </div>
+        <div class="control-cont">
+            <label for="button-id">Button ID:</label>
+            <input id="button-id" type="text" formControlName="buttonId">
+        </div>
+        <div class="spacer"></div>
+    </div>
+</form>
