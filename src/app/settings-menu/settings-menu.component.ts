@@ -19,7 +19,8 @@ export class SettingsMenuComponent {
 
   isOpen: boolean = false;
 
-  @Output() clickResetLanding: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() clickResetLanding: EventEmitter<boolean> =
+    new EventEmitter<boolean>();
 
   constructor(private fb: FormBuilder, private store: Store) {}
 
@@ -30,10 +31,16 @@ export class SettingsMenuComponent {
       subtitleText: [this.landing().intro.subtitle?.text],
       subtitleAlign: [this.landing().intro.subtitle?.align],
       introDisplay: [this.landing().intro.display],
-      logoSize: [this.landing().intro.logoSize],
-      logoUrl: [this.landing().intro.logoUrl],
+      logoSize: [this.landing().intro.logo.size],
+      logoUrl: [this.landing().intro.logo.url],
+      logoId: [this.landing().intro.logo.id],
       animation: [this.landing().intro.animation],
-      padding: [this.landing().intro.padding]
+      padding: [this.landing().intro.padding],
+      linkButton: [this.landing().intro.linkButton?.link],
+      buttonText: [this.landing().intro.linkButton?.text.text],
+      buttonAlign: [this.landing().intro.linkButton?.text.align],
+      buttonWidth: [this.landing().intro.linkButton?.width],
+      buttonId: [this.landing().intro.linkButton?.id],
     });
 
     // Suscribirse a los cambios en el formulario
@@ -48,11 +55,23 @@ export class SettingsMenuComponent {
         };
       }
       updatedLanding.intro.display = values.introDisplay;
-      updatedLanding.intro.logoSize = values.logoSize;
-      updatedLanding.intro.logoUrl = values.logoUrl;
+      updatedLanding.intro.logo.size = values.logoSize;
+      updatedLanding.intro.logo.url = values.logoUrl;
+      updatedLanding.intro.logo.id = values.logoId;
       updatedLanding.intro.animation = values.animation;
       updatedLanding.intro.padding = values.padding;
 
+      if (values.linkButton || values.buttonText) {
+        updatedLanding.intro.linkButton = {
+          link: values.linkButton,
+          text: {
+            align: values.buttonAlign,
+            text: values.buttonText,
+          },
+          width: values.buttonWidth,
+          id: values.buttonId,
+        };
+      }
       this.store.dispatch(new SaveLanding(updatedLanding));
     });
   }
