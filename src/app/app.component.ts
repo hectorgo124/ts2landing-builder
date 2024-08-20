@@ -45,8 +45,10 @@ export class AppComponent {
               text: 'NPM',
             },
           },
-          logoSize: 'xl',
-          logoUrl: 'https://avatars.githubusercontent.com/u/100232264?v=4',
+          logo: {
+            size: 'xl',
+            url: 'https://avatars.githubusercontent.com/u/100232264?v=4',
+          },
           padding: 'md',
         },
         content: [],

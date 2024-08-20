@@ -1,8 +1,8 @@
 # Ts2landingDemo
 ## TODO:
-[x] Implementar NGXS para gestión de estados (Landing State)
-[x] Uso del estado para toda la aplicación, así sincronizar valores en todos los componentes. Ahora mismo hay un fallo en code-modal.component que no actualiza el valor de el componente padre (settings-menu.component).
-- Continuar añadiendo campos al settings-menu.component para poder configurar la Landing.
+- [x] Implementar NGXS para gestión de estados (Landing State)
+- [x] Uso del estado para toda la aplicación, así sincronizar valores en todos los componentes.
+- [x] Continuar añadiendo campos al settings-menu.component para poder configurar la Landing.
 - Posibilidad de separar el settings-menu en varios componentes como por ejemplo:
     - Intro settings
     - Content settings
