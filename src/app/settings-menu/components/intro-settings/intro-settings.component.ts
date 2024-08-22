@@ -36,15 +36,18 @@ export class IntroSettingsComponent implements OnInit {
     this.introForm.valueChanges.subscribe((values) => {
       let updatedLanding: Landing = this.landing();
       updatedLanding.intro.title.text = values.titleText;
-      updatedLanding.intro.title.align = values.titleAlign;
-      if (values.subtitleText || values.subtitleAlign) {
+      updatedLanding.intro.title.textAlign = values.titleAlign;
+      updatedLanding.intro.title.size = values.titleSize;
+      if (values.subtitleText || values.subtitleAlign || values.subtitleSize) {
         updatedLanding.intro.subtitle = {
-          align: values.subtitleAlign,
+          textAlign: values.subtitleAlign,
           text: values.subtitleText,
+          size: values.subtitleSize,
         };
       }
       updatedLanding.intro.display = values.introDisplay;
-      updatedLanding.intro.logo.size = values.logoSize;
+      updatedLanding.intro.logo.height = values.logoHeight;
+      updatedLanding.intro.logo.width = values.logoWidth;
       updatedLanding.intro.logo.url = values.logoUrl;
       updatedLanding.intro.logo.id = values.logoId;
       updatedLanding.intro.animation = values.animation;
@@ -54,8 +57,9 @@ export class IntroSettingsComponent implements OnInit {
         updatedLanding.intro.linkButton = {
           link: values.linkButton,
           text: {
-            align: values.buttonAlign,
+            textAlign: values.buttonAlign,
             text: values.buttonText,
+            size: values.size,
           },
           width: values.buttonWidth,
           id: values.buttonId,
@@ -68,18 +72,21 @@ export class IntroSettingsComponent implements OnInit {
   setIntroForm() {
     this.introForm = this.fb.group({
       titleText: [this.landing().intro.title.text],
-      titleAlign: [this.landing().intro.title.align],
+      titleAlign: [this.landing().intro.title.textAlign],
+      titleSize: [this.landing().intro.title.size],
       subtitleText: [this.landing().intro.subtitle?.text],
-      subtitleAlign: [this.landing().intro.subtitle?.align],
+      subtitleAlign: [this.landing().intro.subtitle?.textAlign],
+      subtitleSize: [this.landing().intro.subtitle?.size],
       introDisplay: [this.landing().intro.display],
-      logoSize: [this.landing().intro.logo.size],
+      logoHeight: [this.landing().intro.logo.height],
+      logoWidth: [this.landing().intro.logo.width],
       logoUrl: [this.landing().intro.logo.url],
       logoId: [this.landing().intro.logo.id],
       animation: [this.landing().intro.animation],
       padding: [this.landing().intro.padding],
       linkButton: [this.landing().intro.linkButton?.link],
       buttonText: [this.landing().intro.linkButton?.text.text],
-      buttonAlign: [this.landing().intro.linkButton?.text.align],
+      buttonAlign: [this.landing().intro.linkButton?.text.textAlign],
       buttonWidth: [this.landing().intro.linkButton?.width],
       buttonId: [this.landing().intro.linkButton?.id],
     });

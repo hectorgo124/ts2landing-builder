@@ -1,40 +1,14 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { LandingStateModel } from './landing.model';
 import { RemoveLanding, SaveLanding } from './landing.actions';
+import { exampleLanding } from 'src/app/mocks/example.landing';
 
 /**
  * Estado de Landing para gestionar la información del Landing.
  */
 @State({
   name: 'landing', // Nombre del estado
-  defaults: {
-    landing: {
-      id: 'landing',
-      intro: {
-        title: {
-          align: 'start',
-          text: 'TS2LANDING. Transforming an object to a Landing Page',
-        },
-        subtitle: {
-          align: 'start',
-          text: 'Created by Hector Granell :)',
-        },
-        display: 'basic-left',
-        animation: 'TitleReveal',
-        linkButton: {
-          link: 'https://www.npmjs.com/package/ts2landing',
-          text: {
-            align: 'center',
-            text: 'NPM',
-          },
-        },
-        logoSize: 'xl',
-        logoUrl: 'https://avatars.githubusercontent.com/u/100232264?v=4',
-        padding: 'md',
-      },
-      content: [],
-    }, // Estado inicial del Landing
-  },
+  defaults: exampleLanding // Estado inicial del Landing
 })
 export class LandingState {
   /**

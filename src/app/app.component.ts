@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { LandingState } from './state/landing/landing.state';
 import { SaveLanding } from './state/landing/landing.actions';
+import { exampleLanding } from './mocks/example.landing';
 
 @Component({
   selector: 'app-root',
@@ -24,34 +25,7 @@ export class AppComponent {
 
   setLanding(): void {
     this.store.dispatch(
-      new SaveLanding({
-        id: 'landing',
-        intro: {
-          title: {
-            align: 'start',
-            text: 'TS2LANDING. Transforming an object to a Landing Page',
-          },
-          subtitle: {
-            align: 'start',
-            text: 'Created by Hector Granell :)',
-          },
-          display: 'basic-left',
-          animation: 'TitleReveal',
-          linkButton: {
-            link: 'https://www.npmjs.com/package/ts2landing',
-            text: {
-              align: 'center',
-              text: 'NPM',
-            },
-          },
-          logo: {
-            size: 'xl',
-            url: 'https://avatars.githubusercontent.com/u/100232264?v=4',
-          },
-          padding: 'md',
-        },
-        content: [],
-      })
+      new SaveLanding(exampleLanding)
     );
   }
 

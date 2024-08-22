@@ -22,6 +22,10 @@
                 <option value="end">End</option>
             </select>
         </div>
+        <div class="control-cont">
+            <label for="title-size">Title Size:</label>
+            <input id="title-size" type="text" formControlName="titleSize">
+        </div>
         <div class="spacer"></div>
         <div class="control-cont">
             <label for="subtitle-text">Subtitle text:</label>
@@ -35,17 +39,20 @@
                 <option value="end">End</option>
             </select>
         </div>
+        <div class="control-cont">
+            <label for="subtitle-size">Subtitle size:</label>
+            <input id="subtitle-size" type="text" formControlName="subtitleSize">
+        </div>
         <div class="spacer"></div>
 
         <div class="control-cont">
-            <!-- logoSize?: 'sm' | 'md' | 'lg' | 'xl'; -->
-            <label for="logoSize">Logo Size</label>
-            <select name="logoSize" id="logoSize" formControlName="logoSize">
-                <option value="sm">Small</option>
-                <option value="md">Medium</option>
-                <option value="lg">Large</option>
-                <option value="xl">Extra Large</option>
-            </select>
+            <label for="logo-height">Logo HEIGHT:</label>
+            <input id="logo-height" type="text" formControlName="logoHeight">
+        </div>
+
+        <div class="control-cont">
+            <label for="logo-width">Logo WIDTH:</label>
+            <input id="logo-width" type="text" formControlName="logoWidth">
         </div>
         <div class="control-cont">
             <label for="logo-url">Logo URL:</label>
@@ -67,15 +74,10 @@
             </select>
         </div>
 
-        <div class="control-cont">
-            <!-- padding?: 'sm' | 'md' | 'lg'; -->
+        <!-- <div class="control-cont">
             <label for="padding">Padding</label>
-            <select name="padding" id="padding" formControlName="padding">
-                <option value="sm">Small</option>
-                <option value="md">Medium</option>
-                <option value="lg">Large</option>
-            </select>
-        </div>
+            <input id="padding" type="text" formControlName="padding">
+        </div> -->
 
         <div class="spacer"></div>
 
