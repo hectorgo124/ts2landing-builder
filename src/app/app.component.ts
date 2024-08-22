@@ -10,7 +10,7 @@ import { exampleLanding } from './mocks/example.landing';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ts2landing-demo';
+  title = 'ts2landing-builder';
   isOpen: boolean = false;
   landing = this.store.selectSignal(LandingState.getLanding);
   // setDisplay(newDisplay : any) {

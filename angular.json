@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ts2landing-demo": {
+    "ts2landing-builder": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ts2landing-demo",
+            "outputPath": "dist/ts2landing-builder",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -33,7 +33,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "baseHref": "/ts2landing-demo/"
+            "baseHref": "/ts2landing-builder/"
           },
           "configurations": {
             "production": {
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ts2landing-demo:build:production"
+              "buildTarget": "ts2landing-builder:build:production"
             },
             "development": {
-              "buildTarget": "ts2landing-demo:build:development"
+              "buildTarget": "ts2landing-builder:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ts2landing-demo:build"
+            "buildTarget": "ts2landing-builder:build"
           }
         },
         "test": {

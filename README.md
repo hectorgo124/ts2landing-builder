@@ -1,4 +1,4 @@
-# Ts2landingDemo
+# Ts2landingBuilder
 ## TODO:
 - [x] Implementar NGXS para gestión de estados (Landing State)
 - [x] Uso del estado para toda la aplicación, así sincronizar valores en todos los componentes.
